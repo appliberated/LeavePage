@@ -18,9 +18,8 @@ class App {
 
     leaveAgain() {
         document.title = LEAVE_TITLE;
+        document.getElementById("portrait").style.display = "inline-block";
     }
-
-
 
     init() {
         document.addEventListener("visibilitychange", () => {
@@ -36,13 +35,9 @@ class App {
             }
         });
 
-        // document.getElementById("test").addEventListener("click", () => {
-        //     this.invisibleAudio.play();
-        // });
-
         document.getElementById("soundOnButton").addEventListener("click", () => {
-            document.getElementById("confirmationPanel").style.visibility = "collapse";
-            document.getElementById("instructionsPanel").style.visibility = "visible";
+            document.getElementById("confirmationPanel").style.display = "none";
+            document.getElementById("instructionsPanel").style.display = "block";
             this.invisibleAudio.load();
         });
     }

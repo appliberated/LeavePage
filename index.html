@@ -9,6 +9,8 @@
 
     <link rel="manifest" href="site.webmanifest">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -19,17 +21,22 @@
     </div>
 
     <div class="container" id="instructionsPanel">
-        <h1>Leave page 9</h1>
-        <p><a href="about:blank" target="_blank">Open a new tab</a>, switch to another open tab, or minimize the browser.</p>
+        <h1>Leave page</h1>
+        <p><a class="link" href="about:blank" target="_blank">Open a new tab</a>, switch to another open tab, or minimize the browser.</p>
     </div>
-
-    <!-- <button id="test">Play invisible audio element</button>
-    <button id="test2">Play audio element</button>
-    <button id="test3">Play Web Audio</button> -->
 
     <audio id="invisibleAudio">
         <source src="/assets/sounds/cbtm.wav" type="audio/wav">
     </audio>
+
+    <footer>
+        <a href="https://github.com/appliberated/LeavePage" target="_blank">
+            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank">
+            <img id="portrait" src="/assets/images/somewhereintime.jpg" alt="Somewhere in Time" />
+        </a>
+    </footer>
 
     <script src="/js/main.js"></script>
 
