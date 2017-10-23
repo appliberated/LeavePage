@@ -27,6 +27,7 @@ class App {
         
             switch (document.visibilityState) {
             case "hidden":
+            case "unloaded":
                 this.comeBack();
                 break;
             case "visible":
@@ -34,6 +35,10 @@ class App {
                 break;
             }
         });
+
+        // window.addEventListener("beforeunload", () => {
+        //     this.comeBack();
+        // });
 
         document.getElementById("soundOnButton").addEventListener("click", () => {
             document.getElementById("confirmationPanel").style.display = "none";
