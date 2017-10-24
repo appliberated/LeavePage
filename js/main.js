@@ -55,8 +55,6 @@ class App {
             document.getElementById("confirmationPanel").classList.add("hidden");
             document.getElementById("instructionsPanel").classList.add("visible");
             
-            // document.getElementById("instructionsPanel").style.display = "block";
-            // document.getElementById("confirmationPanel").style.display = "none";
             this.invisibleAudio.load();
 
             switch (location.search) {
