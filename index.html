@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -21,10 +21,10 @@
             <button id="soundOnButton">Yes, It Is</button>
         </div>
 
-        <div class="container" id="instructionsPanel">
+        <div class="container hidden" id="instructionsPanel">
             <h1>Leave page</h1>
             <ul>
-                <li><a class="link" href="about:blank" target="_blank">Open a new tab</a></li>
+                <li><a class="link" href="about:blank" target="_blank" rel="noopener">Open a new tab</a></li>
                 <li>switch to another tab</li>
                 <li>go Back or Home</li>
                 <li>or minimize the browser</li>
@@ -37,11 +37,11 @@
     </main>
 
     <footer>
-        <a href="https://github.com/appliberated/LeavePage" target="_blank">
+        <a href="https://github.com/appliberated/LeavePage" target="_blank" rel="noopener" aria-label="Leave Page on GitHub">
             <i class="fa fa-github fa-2x" aria-hidden="true"></i>
         </a>
-        <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank">
-            <img id="portrait" src="/assets/images/somewhereintime.jpg" alt="Somewhere in Time" />
+        <a class="hidden" id="portraitLink" href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
+            <img class="portrait" src="/assets/images/somewhereintime.jpg" alt="Somewhere in Time" />
         </a>
     </footer>
 

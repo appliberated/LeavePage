@@ -1,0 +1,23 @@
+{
+  "name": "leavepage",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@appliberated-github:appliberated/LeavePage.git"
+  },
+  "author": "Appliberated",
+  "license": "MIT",
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": 4
+    }
+  },
+  "devDependencies": {
+    "stylelint-config-standard": "^17.0.0"
+  }
+}

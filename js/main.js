@@ -8,6 +8,7 @@ class App {
 
     constructor() {
         this.invisibleAudio = document.getElementById("invisibleAudio");
+        this.portraitLink = document.getElementById("portraitLink");
     }
 
     comeBack() {
@@ -18,10 +19,10 @@ class App {
 
     leaveAgain() {
         document.title = LEAVE_TITLE;
-        document.getElementById("portrait").style.display = "inline-block";
+        this.portraitLink.classList.add("visible");
     }
 
-    init() {
+    initWithVisibilityAPI() {
         document.addEventListener("visibilitychange", () => {
             console.log(document.visibilityState);
         
@@ -35,15 +36,42 @@ class App {
                 break;
             }
         });
+    }
 
-        // window.addEventListener("beforeunload", () => {
-        //     this.comeBack();
-        // });
+    initWithBlur() {
+        window.addEventListener("blur", () => {
+            this.comeBack();
+        });
+        
+        window.addEventListener("focus", () => {
+            this.leaveAgain();
+        });
+    }
+
+    init() {
+
 
         document.getElementById("soundOnButton").addEventListener("click", () => {
-            document.getElementById("confirmationPanel").style.display = "none";
-            document.getElementById("instructionsPanel").style.display = "block";
+            document.getElementById("confirmationPanel").classList.add("hidden");
+            document.getElementById("instructionsPanel").classList.add("visible");
+            
+            // document.getElementById("instructionsPanel").style.display = "block";
+            // document.getElementById("confirmationPanel").style.display = "none";
             this.invisibleAudio.load();
+
+            switch (location.search) {
+            case "?b":
+                this.initWithBlur();
+                break;
+            case "?vb":
+                this.initWithVisibilityAPI();
+                this.initWithBlur();
+                break;
+            case "?v":
+            default:
+                this.initWithVisibilityAPI();
+                break;
+            }
         });
     }
 }
