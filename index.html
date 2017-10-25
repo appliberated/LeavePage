@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,22 +11,22 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
 
+<body>
     <main>
-        <div class="container" id="confirmationPanel">
-            <p>Is your sound on?</p>
-            <button id="soundOnButton">Yes, It Is</button>
+        <div class="card" id="confirmationPanel">
+            <p>is your sound on?</p>
+            <button id="soundOnButton">yes, it is</button>
         </div>
 
-        <div class="container hidden" id="instructionsPanel">
-            <h1>Leave page</h1>
+        <div class="card hidden" id="instructionsPanel">
+            <h1>leave page</h1>
             <ul>
-                <li><a class="link" href="about:blank" target="_blank" rel="noopener">Open a new tab</a></li>
+                <li>
+                    <a class="link" href="about:blank" target="_blank" rel="noopener">open a new tab</a>
+                </li>
                 <li>goto other tab or app</li>
                 <li>minimize the browser, etc.</li>
             </ul>
@@ -36,22 +37,25 @@
         </audio>
     </main>
 
-    <footer>
-        <a href="https://github.com/appliberated/LeavePage" target="_blank" rel="noopener" aria-label="Leave Page on GitHub">
-            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-        </a>
-        <a class="hidden" id="portraitLink" href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
-            <img class="portrait" src="/assets/images/somewhere-in-time.jpg" alt="Somewhere in Time" />
-        </a>
+    <footer class="hidden" id="colophon">
+        <nav>
+            <a class="link" href="https://github.com/appliberated/LeavePage" target="_blank" rel="noopener" aria-label="Leave Page on GitHub">github</a>
+        </nav>
+        <p class="hidden" id="portrait">
+            <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
+                <img class="portrait" src="/assets/images/somewhere-in-time.jpg" alt="Somewhere in Time" />
+            </a>
+        </p>
     </footer>
 
     <script src="/js/main.js"></script>
 
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
         }
-    </script>
+    </script> -->
 
 </body>
+
 </html>

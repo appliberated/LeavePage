@@ -8,7 +8,7 @@ class App {
 
     constructor() {
         this.invisibleAudio = document.getElementById("invisibleAudio");
-        this.portraitLink = document.getElementById("portraitLink");
+        this.portrait = document.getElementById("portrait");
     }
 
     comeBack() {
@@ -19,7 +19,7 @@ class App {
 
     leaveAgain() {
         document.title = LEAVE_TITLE;
-        this.portraitLink.classList.add("visible");
+        this.portrait.classList.add("visible");
     }
 
     initWithVisibilityAPI() {
@@ -52,8 +52,13 @@ class App {
 
 
         document.getElementById("soundOnButton").addEventListener("click", () => {
+            console.log("soundOnButton -> click");
+
             document.getElementById("confirmationPanel").classList.add("hidden");
             document.getElementById("instructionsPanel").classList.add("visible");
+            document.getElementById("colophon").classList.add("visible");
+            document.getElementById("soundOnButton").disabled = true;
+            
             
             this.invisibleAudio.load();
 
