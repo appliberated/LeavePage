@@ -1,23 +1,49 @@
 {
-  "name": "leavepage",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@appliberated-github:appliberated/LeavePage.git"
-  },
-  "author": "Appliberated",
-  "license": "MIT",
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "indentation": 4
+    "name": "leavepage",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@appliberated-github:appliberated/LeavePage.git"
+    },
+    "author": "Appliberated",
+    "license": "MIT",
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "extends": "eslint:recommended",
+        "rules": {
+            "indent": [
+                "error",
+                4
+            ],
+            "linebreak-style": [
+                "error",
+                "windows"
+            ],
+            "no-console": 0,
+            "quotes": [
+                "error",
+                "double"
+            ],
+            "semi": [
+                "error",
+                "always"
+            ]
+        }
+    },
+    "stylelint": {
+        "extends": "stylelint-config-standard",
+        "rules": {
+            "indentation": 4
+        }
+    },
+    "devDependencies": {
+        "stylelint-config-standard": "^17.0.0"
     }
-  },
-  "devDependencies": {
-    "stylelint-config-standard": "^17.0.0"
-  }
 }
