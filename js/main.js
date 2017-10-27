@@ -52,14 +52,8 @@ class App {
 
 
         document.getElementById("soundOnButton").addEventListener("click", () => {
-            console.log("soundOnButton -> click");
-
             document.getElementById("confirmationPanel").classList.add("hidden");
             document.getElementById("instructionsPanel").classList.add("visible");
-            document.getElementById("colophon").classList.add("visible");
-            document.getElementById("soundOnButton").disabled = true;
-            
-            
             this.invisibleAudio.load();
 
             switch (location.search) {

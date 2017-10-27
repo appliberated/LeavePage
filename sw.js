@@ -10,7 +10,8 @@ self.addEventListener("install", e => {
                 "/css/main.css",
                 "/js/main.js",
                 "/assets/images/somewhere-in-time.jpg",
-                "/assets/sounds/come-back-to-me.wav"
+                "/assets/sounds/come-back-to-me.wav",
+                "/assets/images/cursors/cursor-leave.svg"
             ])
                 .then(() => self.skipWaiting());
         })

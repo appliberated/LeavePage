@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Leave page</title>
+    <title>leave page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,37 +16,31 @@
 
 <body>
     <main>
-        <div class="card" id="confirmationPanel">
+        <div id="confirmationPanel">
             <p>is your sound on?</p>
-            <button id="soundOnButton">yes, it is</button>
+            <button class="button" id="soundOnButton">yes, it is</button>
         </div>
 
-        <div class="card hidden" id="instructionsPanel">
+        <div class="hidden" id="instructionsPanel">
             <h1>leave page</h1>
             <ul>
                 <li>
-                    <a class="link" href="about:blank" target="_blank" rel="noopener">open a new tab</a>
+                    <a class="button" href="https://github.com/appliberated/LeavePage" target="_blank" rel="noopener">open a new tab</a>
                 </li>
-                <li>goto other tab or app</li>
+                <li>go to other tab or app</li>
                 <li>minimize the browser, etc.</li>
             </ul>
+            <p class="hidden" id="portrait">
+                <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
+                    <img class="portrait" src="/assets/images/somewhere-in-time.jpg" alt="Somewhere in Time" />
+                </a>
+            </p>
         </div>
 
         <audio id="invisibleAudio">
             <source src="/assets/sounds/come-back-to-me.wav" type="audio/wav">
         </audio>
     </main>
-
-    <footer class="hidden" id="colophon">
-        <nav>
-            <a class="link" href="https://github.com/appliberated/LeavePage" target="_blank" rel="noopener" aria-label="Leave Page on GitHub">github</a>
-        </nav>
-        <p class="hidden" id="portrait">
-            <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
-                <img class="portrait" src="/assets/images/somewhere-in-time.jpg" alt="Somewhere in Time" />
-            </a>
-        </p>
-    </footer>
 
     <script src="/js/main.js"></script>
 
