@@ -44,12 +44,16 @@
 
     <script src="/js/main.js"></script>
 
-    <!-- <script>
+    <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }
-    </script> -->
-
+            navigator.serviceWorker.register('/sw.js')
+                .then(function (reg) {
+                    console.log('Service Worker registration successful with scope: ' + reg.scope);
+                }).catch(function (error) {
+                    console.log('Service Worker registration failed with ' + error);
+                });
+        }        
+    </script>
 </body>
 
 </html>
